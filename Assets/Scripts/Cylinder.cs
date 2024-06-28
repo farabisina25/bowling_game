@@ -1,16 +1,27 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class Cylinder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Vector3 start;
+
+    public void Start()
     {
-        
+        start = transform.position;
+    }
+    
+    public void ResetCylinder()
+    {
+        transform.DOMove(start, 1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool IsMoved()
     {
-        
+        if (transform.position != start)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
