@@ -1017,10 +1017,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b26583bdda247f0b089d5191b435d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InstantiatedObject: {fileID: 0}
-  Level1Prefab: {fileID: 5591857845029606846, guid: 605fecd817d37cd4b9d6b3b1dbaa4002,
-    type: 3}
-  gm: {fileID: 902747724}
+  _levels:
+  - {fileID: 4927718463022991313, guid: 605fecd817d37cd4b9d6b3b1dbaa4002, type: 3}
+  - {fileID: 6482210400812364335, guid: 881f96643cf0c294c91e218f6187f00f, type: 3}
+  LevelIndex: 0
 --- !u!4 &1684263232
 Transform:
   m_ObjectHideFlags: 0

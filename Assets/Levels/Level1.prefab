@@ -271,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CylinderCount: 15
   DeleteCount: 0
+  TotalDelete: 0
 --- !u!1 &5572185142682528273
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587222956372555270}
+  - component: {fileID: 4927718463022991313}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -409,6 +411,18 @@ Transform:
   - {fileID: 250288173794460337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4927718463022991313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591857845029606846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27eb6a363cd19447afa8fe33ee29d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6850259045767015205
 GameObject:
   m_ObjectHideFlags: 0

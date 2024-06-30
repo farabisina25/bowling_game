@@ -1,11 +1,13 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using System;
-    public class LevelManager : MonoBehaviour
+using System.Collections.Generic;
+
+public class LevelManager : MonoBehaviour
     {
-        public GameObject InstantiatedObject;
-        public GameObject Level1Prefab;
-        public GameManager gm;
+        public List<LevelScript> _levels = new();
+        private GameObject InstantiatedObject;
+        public int LevelIndex = 0;
         
         private void Start()
         {
@@ -14,7 +16,7 @@ using System;
         
         public void CreateLevel()
         {
-            InstantiatedObject = Instantiate(Level1Prefab, Vector3.zero, Quaternion.identity);
+            InstantiatedObject = Instantiate(_levels[LevelIndex].gameObject, Vector3.zero, Quaternion.identity);
         }
 
         public async UniTaskVoid RestartLevel()

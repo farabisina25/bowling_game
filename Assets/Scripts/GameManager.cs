@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -16,7 +15,7 @@ public class GameManager : MonoBehaviour
             timer += Time.deltaTime;
             if (ball.ballrb.velocity.magnitude <= 0.1f || timer >= 6)
             {
-                Cylinders cylinders = LevelManager.Level1Prefab.GetComponentInChildren<Cylinders>();
+                Cylinders cylinders = LevelManager._levels[LevelManager.LevelIndex].GetComponentInChildren<Cylinders>();
                 timer = 0f;
                 ball.ResetBall();
                 cylinders.deleteCylinders();
@@ -25,6 +24,7 @@ public class GameManager : MonoBehaviour
                 {
                     ShootCount = 1;
                     Level++;
+                    LevelManager.LevelIndex++;
                     cylinders.TotalDelete = 0;
                     LevelManager.RestartLevel().Forget();
                 }
