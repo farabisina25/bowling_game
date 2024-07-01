@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
                 Score += cylinders.DeleteCount * 10; 
                 if (cylinders.IsFinish())
                 {
+                    Debug.Log("isFinish()");
                     ShootCount = 1;
                     Level++;
                     LevelManager.LevelIndex++;
@@ -32,12 +33,14 @@ public class GameManager : MonoBehaviour
                 {
                     if (ShootCount < 3)
                     {
+                        Debug.Log("Try Shoot");
                         ShootCount++;
                     }
                     else
                     {
+                        Debug.Log("Restart Level");
                         ShootCount = 1;
-                        Level = 1;
+                        Level = LevelManager.LevelIndex + 1;
                         Score = 0;
                         cylinders.TotalDelete = 0;
                         LevelManager.RestartLevel().Forget();

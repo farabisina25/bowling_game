@@ -11,7 +11,7 @@ public class Cylinders : MonoBehaviour
     {
         cylinders = new Cylinder[transform.childCount];
         CylinderCount = transform.childCount;
-        for (int i = 0; i < cylinders.Length; i++)
+        for (int i = 0; i < CylinderCount; i++)
         {
             cylinders[i] = transform.GetChild(i).GetComponent<Cylinder>();
         }
@@ -20,7 +20,7 @@ public class Cylinders : MonoBehaviour
     public void deleteCylinders()
     {
         DeleteCount = 0;
-        for (int i = 0; i < cylinders.Length; i++)
+        for (int i = 0; i < CylinderCount; i++)
         {
             if (cylinders[i] != null && cylinders[i].IsMoved())
             {
@@ -33,6 +33,7 @@ public class Cylinders : MonoBehaviour
 
     public bool IsFinish()
     {
+        Debug.Log(TotalDelete + " , " + CylinderCount);
         if (TotalDelete < CylinderCount)
         {
             return false;

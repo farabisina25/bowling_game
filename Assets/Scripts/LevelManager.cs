@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
             if (InstantiatedObject != null)
             {
                 Destroy(InstantiatedObject);
-                await UniTask.Delay(TimeSpan.FromSeconds(1));
+                await UniTask.Delay(TimeSpan.FromSeconds(0.2));
                 InstantiatedObject = null;
                 CreateLevel();
             }

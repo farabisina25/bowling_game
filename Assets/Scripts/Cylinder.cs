@@ -1,4 +1,3 @@
-using DG.Tweening;
 using UnityEngine;
 
 public class Cylinder : MonoBehaviour
@@ -8,11 +7,6 @@ public class Cylinder : MonoBehaviour
     public void Start()
     {
         start = transform.position;
-    }
-    
-    public void ResetCylinder()
-    {
-        transform.DOMove(start, 1f);
     }
 
     public bool IsMoved()
